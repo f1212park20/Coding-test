@@ -5,7 +5,7 @@ n = 1000-int(input())
 count = 0
 coin_type = [500,100,50,10]#리스트로 만들기
 
-b=[]#b를 초가화
+b=[]#b를 초기화
 for i in  coin_type:
     count= n//i#1,0,1,2
     n=n%i#나머지값 계산
