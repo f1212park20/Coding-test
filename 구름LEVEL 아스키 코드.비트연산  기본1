@@ -1,0 +1,10 @@
+#아스키 코드
+n=input()
+print(ord(n))
+#ord a입력-> 아스키 코드 변환
+
+#코드.비트연산  기본1
+a,b = map(int,input().split())
+print(a and b)
+print(a or b)
+print(a ^ b)
