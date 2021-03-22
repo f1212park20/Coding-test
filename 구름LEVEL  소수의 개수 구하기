@@ -1,0 +1,10 @@
+n=int(input())
+count=0
+
+for n in range(2,n):
+    for i in range(2,n):
+        if  n % i==0:#나누어 0이되면 소수가 아니다
+            break#소수아니기 때문에 중단
+    else: 
+        count+=1#개수를 합산한다
+print(count)#소수출력        
