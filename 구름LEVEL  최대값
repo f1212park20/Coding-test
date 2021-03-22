@@ -1,0 +1,8 @@
+number=int(input())
+number_list=list(map(int, input().split()))
+
+max_num=number_list[0]
+for num in number_list:
+    if num > max_num:#최대값
+        max_num=num#최대값을 max_num에 저장
+print(max_num,number_list.index(max_num)+1)#number_list.index(max_num)+1(인덱스 구하는 공식)
