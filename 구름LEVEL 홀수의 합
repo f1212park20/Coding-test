@@ -1,0 +1,10 @@
+#조건 a,b를 입력받아  홀수의 개수출력
+#함정 문제
+
+a,b=map(int,input().split())
+count=0
+
+for i in range(a, b+1):#(a, b+1)은 필수,(a, b+1)는 오답처리
+    if (i % 2==1):
+        count+=i
+print(count) 
