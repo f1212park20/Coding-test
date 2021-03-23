@@ -1,0 +1,5 @@
+money,benefit,year=map(float, input().split())#돈,이자율,예금 년수
+unit=1#기간을 1 년으로 설정
+
+ret=money*((1+(benefit*0.01/unit))**(year*unit))
+print('%.2f'%ret)#소수점2자리까지 출력
