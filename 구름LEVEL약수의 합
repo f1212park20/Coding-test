@@ -1,0 +1,11 @@
+#n 을 나누었을 때 나머지가 0인 것을 약수라 한다.
+#sum함수는 list형태에서 사용가능
+
+num=int(input())
+
+count=0
+b=[]
+for i in range(1, num+1):
+    if num % i==0:
+       b.append(i)
+print(sum(b))    
