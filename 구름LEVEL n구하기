@@ -1,0 +1,10 @@
+n=int(input())
+
+sum=0
+b=[]
+for i in range(1,1000):
+    sum+=i
+    b.append(i)#i값을 b에 추가 
+    if sum>n:#n값을 입력받고  n값을 넘는숫자 출력
+        break#n값을 초과하면 중단
+print(b[-1])# 역순으로 마지막 숫자 출력   
