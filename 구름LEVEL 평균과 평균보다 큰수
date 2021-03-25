@@ -1,0 +1,10 @@
+n=int(input())
+num_list=list(map(int,input().split()))
+
+count=0#개수를 구하는 변수
+avg=sum(num_list)/n#평균을 구하는 공식
+for i in  num_list:#for 문을 통해  리스트 안에 있는 수를 출력
+    if i  > avg:
+        count+=1#평균보다 큰수의 개수 카운트
+        
+print('%.1f' %avg, count)#1의 자리까지 표현.개수를 출력      
