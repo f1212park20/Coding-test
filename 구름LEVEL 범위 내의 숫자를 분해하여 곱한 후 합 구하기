@@ -1,0 +1,8 @@
+a,b=map(int, input().split())#10 100입력
+
+new_list=[]
+for num in range(a,b+1):
+    s=list(str(num))#문자열로 출력
+    s='*'.join(s)
+    new_list.append(eval(s))#문자열을 곱한다
+print(sum(new_list)) 
