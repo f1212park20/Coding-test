@@ -1,0 +1,11 @@
+word=list(str(input()))
+answer=[]
+
+for  num in  word:
+    if num in 'abcdefghijklmnopqrstuvwxyz':#소문자를 대문자로 변경
+            answer.append(num.upper())
+    else:#대문자를 소문자로 번경
+            answer.append(num.lower())
+
+for num in answer:
+    print(num, end= '')
