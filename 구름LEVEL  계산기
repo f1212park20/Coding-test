@@ -1,0 +1,14 @@
+def cal_result(a, op,b):
+    if op == '+':
+        print(a+b)
+    elif op == '-':
+        print(a-b)
+    elif op == '*':
+       print(a*b)
+    elif op == '/':
+       print('%.2f'%(a/b))
+
+num1 , char,  num2=input().split()#문자열로 입력 받는다
+number1=int(num1)#문자->숫자
+number2=int(num2)#문자->숫자
+cal_result(number1,char,number2)
