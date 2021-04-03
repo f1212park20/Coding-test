@@ -1,0 +1,12 @@
+for i in range(1, int(input())+1):
+    sentence=input()
+    vowel=set(['a','e','i','o','u','A','E','I','O','U'])
+    cnt=0
+    for char in sentence:
+        if char in  vowel:
+            print(char,end='')
+            cnt+=1
+    if cnt==0:
+        print('???')
+    else:
+         print()
