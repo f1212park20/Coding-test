@@ -1,0 +1,11 @@
+#방배정하기(백준.구름LEVEL)
+#빈 침대 없이 배정이 가능할 경우 표준 출력으로 1을, 불가능할 경우 0을 출력한다.
+a,b,c,n=(map(int,input().split()))
+cnt=0
+for  i in range(51):
+    for j in range(51):
+        for  k in range(51):
+            if a*i + b*j+c*k==n:
+                cnt=1
+                break
+print(cnt)
