@@ -1,0 +1,29 @@
+#python코드
+import math
+
+def distance(x1,y1,x2,y2):
+    result=math.sqrt(math.pow(x1-x2,2)+math.pow(y1-y2,2))
+    return result
+
+#main
+a,b=map(int, input().split())
+c,d=map(int, input().split())
+p1=(a,b)
+p2=(c,d)
+
+d=distance(p1[0],p1[1],p2[0],p2[1])
+print(round(d,2))
+
+#java코드
+import math
+
+def distance(x1,y1,x2,y2):
+    result=math.sqrt(math.pow(x1-x2,2)+math.pow(y1-y2,2))
+    return result
+
+#main
+p1=(10,20)
+p2=(30,40)
+
+d=distance(p1[0],p1[1],p2[0],p2[1])
+print(round(d,2))
