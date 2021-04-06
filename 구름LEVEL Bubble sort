@@ -1,0 +1,10 @@
+n=int(input())
+arr=list(map(int, input().split()))
+
+for i in range(0,len(arr)):
+    for j in range(len(arr)-1,i,-1):
+        #앞에 숫자가 뒤에 숫자보다크면 자리 교환
+        if arr[j-1]>arr[j]:
+            arr[j-1],arr[j]=arr[j],arr[j-1]
+for x in  arr:#x결과값을 for문을 사용해  출력
+     print(x,end=' ')
