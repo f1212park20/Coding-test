@@ -1,0 +1,26 @@
+
+def check(left, right):
+    while left < right:
+        if s[left]==s[right]:
+            left+=1
+            right-=1
+        else:
+            return False
+    return True
+
+
+def twopointer(left, right):#투포인터로 하나씩 비교한다.
+    while left < right:
+        if s[left]==s[right]:
+            left+=1
+            right-=1
+        else:#만약 좌우가 다른 문자가 나올 경우, left+1해서 검사하고 right-1해서 검사한다.
+            if check(left+1, right) or check(left, right-1):
+                return 1
+            return 2
+    return 0
+
+T=int(input())
+for _ in range(T):
+    s=input()
+    print(twopointer(0, len(s)-1))
