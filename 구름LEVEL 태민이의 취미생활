@@ -1,0 +1,6 @@
+num=int(input())
+sum1 = num * (num + 1) // 2 % 1000000007
+answer = sum1 * sum1 % 1000000007
+print(answer)
+
+
