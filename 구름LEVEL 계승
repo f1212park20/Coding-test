@@ -1,0 +1,13 @@
+#팩토리얼
+#팩토리얼 함수를 만든 후,
+#입력이 0인 경우와 1인 경우 1을 반환하고, 그 외의 경우는 N * factorial(N-1)을 실행한다.
+N=int(input())
+
+def factorial(N):
+    if N==0:
+        return 1
+    elif N==1:
+        return 1
+    return  N*factorial(N-1)
+
+print(factorial(N))
