@@ -1,0 +1,11 @@
+def gcd (x:int,  y:int)->int:
+    if y==0:
+        return x
+    else:
+        return gcd(y,x%y)
+
+if __name__=='__main__':
+    x,y=map(int,  input().split())
+    
+    print(gcd(x,y))
+    
