@@ -1,0 +1,13 @@
+public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		int answer=Integer.parseInt(br.readLine());
+		long result=0;
+		
+		for(int i=1;i<=answer;i++) {
+			result+=Math.pow(3, i);
+		}
+		System.out.println(result);
+		
+
+	}
