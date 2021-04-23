@@ -1,0 +1,11 @@
+#재원넘버
+#구하고자 하는 자리수의 해당하는 중복 순열을 구해주면 되는 문제다.
+#하지만 모든 숫자를 포함하라했으니 만약 3자리수에 해당하는 모든 숫자는 1자리수, 2자리수, 3자리수에 해당하는 모든 숫자들일거다. 이 점을 주의하고 문제를 풀면 된다.
+import math
+
+answer=int(input())
+result=0
+
+for i in range(1,answer+1):
+    result+=math.pow(3,i);
+print(round(result))    
