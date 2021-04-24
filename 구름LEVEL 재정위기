@@ -1,0 +1,14 @@
+#재정위기
+#최대,최소값 공식 활용
+
+number_list=list(map(int, input().split()))
+
+max_num=number_list[0]
+min_num=number_list[0]
+
+for num in number_list:
+    if num > max_num:
+        max_num=num#최대값 저장
+    if  num < min_num:
+        min_num=num#최소값 저장
+print(num)#최대값.최소값 제외한 값
