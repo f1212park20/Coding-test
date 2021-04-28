@@ -1,0 +1,16 @@
+from decimal import *
+num=float(input())
+
+price=0
+
+if(num<100):
+    price=(num*0.5)/100
+elif (num<200):
+    price=(num*0.7)/100
+elif (num<300):
+    price=(num*0.9)/100
+else:
+    price=num/100
+
+a=Decimal(price)
+print(round(a,2))
