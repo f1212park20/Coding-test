@@ -1,0 +1,24 @@
+Scanner sc=new Scanner(System.in);
+		
+		int num=sc.nextInt();
+		
+		double price=0;
+		
+		if(num<100) {
+			price=(num*0.5)/100;
+		}
+		else if(num<200) {
+			price=(num*0.7)/100;
+		}
+		else if(num<300) {
+			price=(num*0.9)/100;
+		}
+		else {
+			price=num/100;
+		}
+		
+		
+		DecimalFormat df=new DecimalFormat("0.00");
+		String result=df.format(price);
+		System.out.println(result);
+	
