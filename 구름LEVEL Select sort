@@ -1,0 +1,24 @@
+#배열과 인덱스의 수
+n,s=map(int,input().split());
+arr=list(map(int,input().split()))
+
+
+#삽입 정렬 시작
+N = len(arr)
+ 
+for i in range(s-1+1):
+    minidx = i
+ 
+    for j in range(i+1, N):                         #최솟값 찾기
+        if arr[j] < arr[minidx]:
+            minidx = j       
+ 
+    if i != minidx:
+        arr[minidx], arr[i] = arr[i], arr[minidx]    #swap
+ 
+#삽입 정렬된 결과 출력
+print("출력자료",end=" ");
+for i in range(0, n):
+    print(arr[i],end=' ');
+print();
+
