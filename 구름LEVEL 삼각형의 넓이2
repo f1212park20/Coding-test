@@ -1,0 +1,13 @@
+#숫자만 입력 받으면 테스트 케이스 통과가 안된다
+#소수점 처리를 해주는 것이 중요(소수점으로 변환한 다음  계산진행)
+import math
+line=input()
+arr=line.split()
+a=float(arr[0])#소수점으로 변환한 다음  계산진행
+b=float(arr[1])
+c=float(arr[2])
+#print(a,b,c)
+
+s=(a+b+c)/2
+answer=math.sqrt(s*(s-a)*(s-b)*(s-c))
+print("%.2f"%answer)
