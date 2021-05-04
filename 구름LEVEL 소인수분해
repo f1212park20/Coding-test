@@ -1,0 +1,23 @@
+def get_prime_factor(num):
+    from collections import defaultdict
+    dic=defaultdict(int)
+    d=2
+
+    while d<=num:
+        if num % d==0:
+            dic[d]+=1
+            num=num/d
+        else:
+            d+=1
+    return dic
+
+#main
+N=int(input())
+dic=get_prime_factor(N)
+prime=[]
+
+for i in dic.keys():
+    for j in range(dic[i]):
+        prime.append(str(i))
+bond=' '
+print(bond.join(prime))
