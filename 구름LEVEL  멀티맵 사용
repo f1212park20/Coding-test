@@ -1,0 +1,17 @@
+#규칙
+#4-멀티탭 개수 입력(n)
+#7 8 2 3-각 멀티탭의 구 수
+#해결 방법
+#7+8+2+3-(len(n)-1)=17
+
+n=int(input())
+num_list=list(map(int, input().split()))
+
+sum1=0
+a=0
+for i in num_list:
+    sum1+=i
+    a=sum1-(len(num_list)-1)
+print(a)
+
+
