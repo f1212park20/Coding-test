@@ -2,7 +2,7 @@
 #4-멀티탭 개수 입력(n)
 #7 8 2 3-각 멀티탭의 구 수
 #해결 방법
-#7+8+2+3-(len(n)-1)=17
+#7+8+2+3-(len(num_list)-1)=17
 
 n=int(input())
 num_list=list(map(int, input().split()))
