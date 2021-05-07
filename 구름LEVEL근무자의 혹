@@ -1,0 +1,21 @@
+#근무자의 혹
+import sys
+import math
+
+n, k=map(int, sys.stdin.readline().split())
+arr=list(map(int, sys.stdin.readline().split()))
+
+# 양의 무한대(math.inf)
+answer=math.inf
+#가장 작은수 가 맨앞일때...맨 뒤일때
+#index를 통해 가장 작은 숫자를 찾는다
+start_idx=arr.index(min(arr))
+for i in range(k):
+    cnt=1
+    #front,back를 구분한다
+    front,back=arr[:start_idx-i],arr[start_idx+k-i:]
+    front_cnt=len(front)//(k-1)+(1 if len(front) % (k-1) else 0)
+    back_cnt=len(back)//(k-1)+(1 if len(back) % (k-1) else 0)
+    answer=min(answer, cnt+front_cnt+back_cnt)
+print(answer)    
+
