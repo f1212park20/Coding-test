@@ -1,0 +1,23 @@
+#직접 해결
+def get_divisor(n):
+    n = int(n)
+    divisors = []
+    divisors_back = [] 
+    
+    for i in range(1, int(n**(1/2)) + 1): 
+        if (n % i == 0):            
+            divisors.append(i)
+            if (i != (n // i)): 
+                divisors_back.append(n//i)
+          
+    print(min(divisors[1:] +divisors_back[::-1]))
+
+
+a,b=map(int, input().split())
+
+if (a!=b):
+    print("2")
+else:
+    get_divisor(a)
+            
+        
