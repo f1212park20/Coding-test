@@ -1,0 +1,30 @@
+#3.시간 복잡도 
+def get_divisor(n):
+    n=int(n)
+    divisors=[]
+
+    for i in range(1,n+1):
+        if(n % i==0):
+            divisors.append(i)
+
+    return sum(divisors)
+#main
+n=int(input())
+print(get_divisor(n))
+
+#4.시간 복잡도
+def get_divisor(n):
+    n=int(n)
+    divisors=[]
+    divisors_back=[]
+
+    for i in range(1,int(n**(1/2))+1):
+        if(n % i==0):
+            divisors.append(i)
+            if (i !=(n//i)):
+                divisors_back.append(n//i)
+
+    return sum(divisors + divisors_back[::-1])
+#main
+a=int(input())
+print(get_divisor(a))
