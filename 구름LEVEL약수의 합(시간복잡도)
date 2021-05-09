@@ -1,0 +1,33 @@
+#정답코드
+def get_divisor(n):
+    n=int(n)
+    divisors=[]
+
+    for i in range(1,n+1):
+        if(n % i==0):
+            divisors.append(i)
+
+    #리스트 -> 숫자 형태로 변환
+    for j in divisors:
+        print(j,end=' ')
+
+#main
+n=int(input())
+get_divisor(n)
+
+#리스트 형태로  출력
+def get_divisor(n):
+    n=int(n)
+    divisors=[]
+    divisors_back=[]
+
+    for i in range(1,int(n**(1/2))+1):
+        if(n % i==0):
+            divisors.append(i)
+            if (i !=(n//i)):
+                divisors_back.append(n//i)
+
+    return divisors + divisors_back[::-1]
+#main
+a=int(input())
+print(get_divisor(a))
