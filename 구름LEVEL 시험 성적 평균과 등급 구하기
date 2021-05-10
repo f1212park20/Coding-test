@@ -1,0 +1,17 @@
+kor,mat,eng= input().split()
+kor=int(kor)
+mat=int(mat)
+eng=int(eng)
+avr=(kor+mat+eng)/3
+print('%.2f'%(avr),end=' ')
+
+if avr>=90:
+    print("A")
+elif 90>avr>=80:
+    print("B")
+elif 80>avr>=70:
+    print("C")
+elif 70>avr>=60:
+    print("D")
+else:
+    print("F")
