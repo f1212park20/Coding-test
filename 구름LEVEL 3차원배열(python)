@@ -1,0 +1,13 @@
+b=[]
+count=0
+for i in range(27):      # n번 반복
+    print(i+1, end=" ")
+    b.append(i+1)#리스트에 숫자 저장
+    count+=1#숫자를 저장하는 횟수를 계산
+    if i % 3 == 3 - 1:  # n번 판단
+        print()         # 줄바꿈
+        if count==9 or count==18:#만약 count==9 or count==18이면 줄바꿈
+            print()
+    
+if 14 % 3:
+    print()             # 줄바꿈
