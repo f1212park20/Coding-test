@@ -1,0 +1,8 @@
+#해결방법
+#3의 배수를 이용해 줄바꿈
+i=int(input())
+for x in range(2, 10,1):
+     for y in range(1,9+1,1):
+         print(f'{x} x {y} = {x*y}',end=" ")
+         if y % i==0:  #3의배수 구하기               
+            print()#만일 y가 3의 배수 인경우  줄바꿈
