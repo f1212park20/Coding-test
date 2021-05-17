@@ -1,0 +1,22 @@
+#출석부
+#이름에 속한 이웃하는 두개의 철자를 비교했을 때 앞의 철자가 뒤의 철자보다 사전 순으로 빠를 경우,
+#오히려 앞의 철자를 지우면 결과적으로 늦게 불린다.
+#abc->bc
+name=input()
+flag=False
+
+for i in range(len(name)-1):
+     cur=name[i]#0,1
+     #print(cur)
+     nex=name[i+1]#0,1
+     #print(nex)
+     if cur<=nex:
+          continue
+     else:
+          flag=True
+          break
+
+if flag:#false일때
+     print(name[:i],name[i+1:],sep='')
+else:#true일때
+     print(name[:-1])
