@@ -1,0 +1,30 @@
+import math,sys
+from itertools  import permutations
+
+def check_prime(n):
+    for i in range(2,int(math.sqrt(n)+1)):
+        if n % i==0:
+            return False
+    return True
+n=int(input())
+
+arr=range(2,n+1)
+candidates=permutations(arr, len(arr))
+for each in candidates:
+    numbers=set()
+    #맨 앞 뒤 숫자와 처음 숫자 저장
+    numbers.add(1+each[0])
+    numbers.add(each[-1]+1)
+    for  idx in range(1,len(each)):
+        numbers.add(each[idx]+each[idx-1])
+    flag=True
+
+    #각 숫자의 소수여부 확인
+    for num in numbers:
+        if not check_prime(num):
+            flag=False
+            break
+
+   #전부 소수인 경우
+    if flag:
+        print("1 "+" ".join(map(str,each)))
