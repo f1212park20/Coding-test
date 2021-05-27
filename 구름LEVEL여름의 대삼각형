@@ -1,0 +1,13 @@
+# 값이 음수로 나올 수 있기 때문에 절댓값으로 변환하여 넓이를 저장-abs사용
+def get_area(x,y):
+    area=abs(0.5*( (x[0]*(y[1]-y[2])) + (x[1]*(y[2]-y[0])) + (x[2]*(y[0]-y[1])) ))
+    return area
+
+x1,y1=map(float,input().split())
+x2,y2=map(float,input().split())
+x3,y3=map(float,input().split())
+
+#main
+x=[x1,x2,x3]
+y=[y1,y2,y3]
+print('%.2f'%(get_area(x,y)))
