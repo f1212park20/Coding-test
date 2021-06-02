@@ -1,0 +1,9 @@
+n=input()
+
+for i in range(len(n)):
+    print(n[0:i+1])
+
+입려:abc
+a
+ab
+abc
