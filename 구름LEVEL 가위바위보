@@ -1,0 +1,23 @@
+#가위 바위 보
+#일반적인 가위비위보는 규칙X
+#구름레벨의 경우 데스트 케이스를 통과해야하기 때문에 규칙이 존재
+
+s=input().split()
+x=0#가위
+o=0#바위
+q=0#보
+for i in range(5):
+    if(s[i]=='1'):
+        x+=1
+    elif(s[i]=='2'):
+        o+=1
+    elif(s[i]=='3'):
+        q+=1
+if(x==0 and o!=0 and q!=0):
+    print(q)
+elif(x!=0 and o==0 and q!=0):
+    print(x)
+elif(x!=0 and o!=0 and q==0):
+    print(o)
+else:
+    print(0)
