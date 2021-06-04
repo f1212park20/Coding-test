@@ -1,0 +1,10 @@
+n=input()
+a,b=map(int, input().split())
+print(n[a-1:a+b-1])
+
+#틀린코드
+#파이썬의 리스트 개념을 공부 하는 것이 중요
+n=input()
+a,b=map(int, input().split())
+print(n[a-1:a+2])
+
