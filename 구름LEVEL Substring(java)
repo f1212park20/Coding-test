@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class Main {
+	public static void main(String[] args) throws Exception {
+		Scanner sc=new Scanner(System.in);
+		
+		String str1=sc.nextLine();
+		
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		
+		String str2=str1.substring(a-1,a+b-1);
+		System.out.println(str2);
+	}
+}
+
+#주의사항
+#모든 테스트 케이스를 통과할수 없는 코드 
+String str2=str1.substring(a-1,b+2);
