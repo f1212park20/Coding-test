@@ -1,0 +1,7 @@
+x1, y1=map(float, input().split())
+x2,y2=map(float, input().split())
+op=input()
+if(op=='+'):
+    print(format(x1+x2,'.2f'),format(y1+y2,'.2f'))
+else:
+    print(format(x1-x2,'.2f'),format(y1-y2,'.2f'))
