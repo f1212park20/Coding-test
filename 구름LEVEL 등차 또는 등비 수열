@@ -1,0 +1,17 @@
+line=input().split()
+
+#등차
+d1=int(line[1])-int(line[0])#3-1=2
+d2=int(line[2])-int(line[1])#5-3=2,3개의자리가 -해서 2씩 떨어지는 경우
+
+#등비
+r1=int(line[1])/int(line[0])
+r2=int(line[2])/int(line[1])#나누어서 3개의 자리에 똑같은 숫자가 나오는 경우
+
+if d2==d1:
+    print(int(int(line[3])+d1))
+elif r2==r1:
+    print(int(int(line[3])*r1))
+
+
+
