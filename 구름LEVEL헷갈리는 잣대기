@@ -1,0 +1,21 @@
+s = input()
+
+count_1=0
+count_I=0
+count_L=0
+count__=0
+
+for i in range(0,len(s)):
+    if s[i]=='1':
+        count_1+=1
+    if s[i]=='I':
+        count_I+=1
+    if s[i]=='l':
+        count_L+=1
+    if s[i]=='|':
+       count__+=1
+       
+print(count_1)
+print(count_I)
+print(count_L)
+print(count__) 
