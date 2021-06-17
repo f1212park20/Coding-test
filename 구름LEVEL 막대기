@@ -1,0 +1,21 @@
+Number=int(input())
+
+# 막대기들의 높이값이 입력된 리스트
+NumberList=[]
+
+# Number의 수만큼 입력할 막대기들의 높이를 입력
+for i in range(Number):
+    NumberList.append(int(input()))
+
+# 일단 오른쪽에서 볼 수 있는 가장 맨앞의 막대기로 초기화시켜준다.
+BigBar=NumberList[Number-1]
+
+# 6번 막대기보다 큰 막대기들을의 리스트
+BigList=[]
+BigList.append(BigBar)
+
+for j in range(1, Number):
+    if BigBar < NumberList[Number-1-j]:
+        BigList.append(NumberList[Number-1-j])
+        BigBar=NumberList[Number-1-j]
+print(len(BigList))
