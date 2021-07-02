@@ -1,0 +1,14 @@
+#그리드 알고리즘
+#백준 주유소 알고리즘 참고
+n=int(input())
+path=list(map(int, input().split()))#변수 저장
+price=list(map(int, input().split()))#최소값 저장
+
+answer=0#다음 정류장까지의 가격을 계산하여 answer에 저장
+liter=price[0]
+for i in range(len(path)):
+    answer=answer+path[i]*liter
+    #만약 다음 정류장에서의 리터가격이 현재리터가격보다 싸다면 liter에 싼리터가격으로 업데이트
+    if liter > price[i+1]:
+        liter=price[i+1]
+print(answer)
