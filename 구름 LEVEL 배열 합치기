@@ -1,0 +1,9 @@
+#구름레벨은 뛰어쓰기 가 중요.백준과 다른점은 뛰어쓰기 준수 안하면 오답처리
+import sys
+
+a,b=map(int, sys.stdin.readline().split())
+a_list=list(map(int, sys.stdin.readline().split()))
+b_list=list(map(int, sys.stdin.readline().split()))
+concat_list=a_list+b_list
+concat_list.sort()#오름차순으로 정렬.중복값을 제외
+print(*concat_list,end=' ')#뛰어쓰기 처리(end=' ')
