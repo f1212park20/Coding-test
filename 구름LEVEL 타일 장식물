@@ -1,0 +1,29 @@
+#카카오 인터쉽 문제
+#암기
+#타일의 둘레들을 나열해보면, 피보나치와 비슷한 형태이다. 재귀함수를 쓰면 시간초과가 날것 같아 반복문으로 풀어보았다.
+a1=4
+a2=6
+result=0
+n=int(input())
+if n==1:
+    result=a1
+elif n==2:
+    result=a2
+else:
+    for i in range(2,n):
+        result=a1+a2
+        a1=a2
+        a2=result
+print(result)
+
+#직사각형의 둘레를 나열해보면 피보나치와 비슷한 점화식이 세워지는 것을 확인 할 수 있다.
+n=int(input())
+
+d=[0]*81
+d[0]=4
+d[1]=6
+
+for i in range(2,n+1):
+    d[i]=d[i-1]+d[i-2]
+
+print(d[n-1])
