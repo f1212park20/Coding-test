@@ -1,0 +1,35 @@
+#카카오 인터쉽 문제
+#암기 필요
+import heapq
+import sys
+
+input = sys.stdin.readline
+n, k = map(int, input().split())
+
+cus=[]
+items=[]
+#먼저 회원번호와 물건 수를 따로 저장합니다.
+for _ in range(n):
+    customer, item_cnt = map(int, input().split())
+    cus.append(customer)
+    items.append(item_cnt)
+
+#그 후 counter에 k개의 카운터를 생성하고 현재 걸리는 시간을 0으로 설정합니다. (0의 자리는 그 카운터가 비는 시간을 의미합니다.)
+counter=[]
+for i in range(k):
+    heapq.heappush(counter,(0,i))
+
+#time_needed는 n번째 인덱스에 n번째 카운터가 다음에 비는 시간을 저장합니다.
+time_needed=[0]*k
+
+
+finished = []
+for i in range(n):
+    #그 다음에 현재 카운터에서 가장 빨리 비는 카운터를 가져옵니다. (0의 자리에 있던 수가 가장 작은 것)
+    t, x = heapq.heappop(counter)
+    time_needed[x] += items[i]
+    #그리고 해당 카운터에 다음 물건들을 넣고 finished에 걸린 시간과 카운터 번호를 넣는데 카운터 번호가 음수인 이유는 나중에 정렬할 때 더 큰 번호가 먼저 가야하기 때문입니다.
+    heapq.heappush(counter, (time_needed[x], x))
+    finished.append((time_needed[x], -x, i))
+#모든 회원에 대해 위 과정을 수행한 후 finished를 정렬하고 해당 회원번호에 나온 순서를 곱해서 그 합을 출력하면 됩니다
+print(sum(cus[t[2]] * (i+1) for i, t in enumerate(sorted(finished))))
