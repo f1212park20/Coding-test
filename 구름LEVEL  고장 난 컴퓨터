@@ -1,0 +1,13 @@
+#https://codechasseur.tistory.com/64
+#자바 코드를 파이썬 코드로 직접 변환
+n, m=map(int, input().split())
+arr=list(map(int, input().split()))
+cnt=1
+
+#화면에 남은 글자 갯수
+#1로 초기화 하는 이유:제한시간이 지났어도 입력한 숫자로 인해 최소한 한개의 문자는 존재
+    if arr[i+1]-arr[i]>m:
+        cnt=1
+    else:
+        cnt+=1
+print(cnt)
