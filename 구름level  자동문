@@ -1,0 +1,29 @@
+#https://jun01.tistory.com/7?category=791891
+#c언어 코드를 파이썬 코드로 변환
+#단수일 연산만 되는 코드
+'''
+import math
+
+n=int(input())
+num=list(map(float, input().split()))
+
+
+time=math.sqrt(num[0]*2/num[1])
+total_distance = num[2]*time
+print(format(total_distance,"<10.2f"))
+'''
+
+# 여러개 입력후 처리 방법
+#정답
+import math
+n=int(input())
+
+
+for i in range(n):
+    num=list(map(float, input().split()))
+    time=math.sqrt(num[0]*2/num[1])
+    time=math.sqrt(num[0]*2/num[1])
+    total_distance = num[2]*time
+    print(format(total_distance,"<10.2f"))
+
+
